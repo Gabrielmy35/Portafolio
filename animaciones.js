@@ -1,6 +1,6 @@
-// Animación al hacer scroll
-window.addEventListener('scroll', function() {
-    const elementos = document.querySelectorAll('.seccion-destacada, .tarjeta-servicio');
+// Animaciones al hacer scroll
+window.addEventListener('scroll', () => {
+    const elementos = document.querySelectorAll('.tarjeta-servicio, .proyecto, .grupo-habilidad, .item-timeline');
     elementos.forEach(elemento => {
         const posicion = elemento.getBoundingClientRect().top;
         const alturaVentana = window.innerHeight;
@@ -12,23 +12,20 @@ window.addEventListener('scroll', function() {
     });
 });
 
-// Efecto hover para proyectos
-document.querySelectorAll('.proyecto').forEach(proyecto => {
-    proyecto.addEventListener('mouseover', () => {
-        proyecto.querySelector('img').style.transform = 'scale(1.1)';
-    });
-    
-    proyecto.addEventListener('mouseout', () => {
-        proyecto.querySelector('img').style.transform = 'scale(1)';
-    });
-});
-
-// Smooth scroll
+// Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+    anchor.addEventListener('click', function(e) {
         e.preventDefault();
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         });
     });
+});
+
+// Animación formulario
+const formulario = document.querySelector('.formulario-contacto');
+formulario.addEventListener('submit', (e) => {
+    e.preventDefault();
+    formulario.reset();
+    alert('¡Mensaje enviado con éxito! Pronto me pondré en contacto contigo.');
 });

@@ -3,207 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desarrollo Web Profesional</title>
+    <title>Gabriel Morales - FullStack Developer</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <header class="header-animado">
-        <h1>Desarrollo Web Profesional</h1>
+        <h1>Gabriel Morales</h1>
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#portafolio">Portafolio</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#personal">Sobre Mí</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- Sección de Servicios Mejorada -->
+        <!-- Sección Hero -->
+        <section id="inicio" class="seccion-hero">
+            <div class="contenido-hero">
+                <h2>Transformando ideas en soluciones digitales</h2>
+                <p class="intro-texto">Desarrollador FullStack apasionado por crear aplicaciones web y móviles innovadoras con enfoque en experiencia de usuario y rendimiento.</p>
+                <a href="#contacto" class="btn-cta">Contáctame</a>
+            </div>
+        </section>
+
+        <!-- Sección Servicios -->
         <section id="servicios">
-            <h2 class="titulo-seccion">Nuestros Servicios</h2>
+            <h2 class="titulo-seccion">Servicios Profesionales</h2>
+            <p class="descripcion-seccion">Soluciones tecnológicas personalizadas para potenciar tu presencia digital</p>
             <div class="grid-servicios">
                 <div class="tarjeta-servicio">
                     <i class="fas fa-laptop-code"></i>
-                    <h3>Desarrollo Web FullStack</h3>
-                    <p>Creación de aplicaciones completas con MERN Stack (MongoDB, Express, React, Node.js)</p>
+                    <h3>Desarrollo FullStack</h3>
+                    <p>Aplicaciones web completas desde el frontend hasta la infraestructura backend:</p>
                     <ul class="lista-servicios">
-                        <li>Desarrollo de APIs REST</li>
-                        <li>Autenticación JWT</li>
-                        <li>Integración con pasarelas de pago</li>
+                        <li>Arquitectura escalable</li>
+                        <li>APIs REST/GraphQL</li>
+                        <li>Integración de pagos</li>
+                        <li>Autenticación JWT/OAuth</li>
                     </ul>
                 </div>
+                
                 <div class="tarjeta-servicio">
                     <i class="fas fa-mobile-alt"></i>
-                    <h3>Diseño Mobile First</h3>
-                    <p>Desarrollo responsive prioritizando dispositivos móviles:</p>
+                    <h3>Apps Móviles</h3>
+                    <p>Desarrollo multiplataforma con tecnologías modernas:</p>
                     <ul class="lista-servicios">
-                        <li>Pruebas en múltiples dispositivos</li>
+                        <li>React Native</li>
+                        <li>Flutter</li>
                         <li>Optimización de rendimiento</li>
-                        <li>Animaciones CSS fluidas</li>
+                        <li>Publicación en stores</li>
                     </ul>
                 </div>
+
                 <div class="tarjeta-servicio">
-                    <i class="fas fa-rocket"></i>
-                    <h3>Optimización Avanzada</h3>
-                    <p>Mejora continua de proyectos existentes:</p>
+                    <i class="fas fa-cloud"></i>
+                    <h3>Cloud Solutions</h3>
+                    <p>Implementación y gestión en la nube:</p>
                     <ul class="lista-servicios">
-                        <li>Auditoría SEO técnica</li>
-                        <li>Compresión de assets</li>
-                        <li>Implementación de CDN</li>
+                        <li>AWS y Google Cloud</li>
+                        <li>CI/CD Pipelines</li>
+                        <li>Escalabilidad automática</li>
+                        <li>Monitoreo en tiempo real</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Sección de Portafolio Mejorada -->
+        <!-- Sección Portafolio -->
         <section id="portafolio" class="seccion-destacada">
-            <h2 class="titulo-seccion">Proyectos Destacados</h2>
+            <h2 class="titulo-seccion">Portafolio de Proyectos</h2>
+            <p class="descripcion-seccion">Algunos de mis trabajos recientes donde he aplicado diferentes tecnologías y soluciones innovadoras</p>
             <div class="grid-portafolio">
                 <div class="proyecto">
-                    <img src="https://source.unsplash.com/random/400x300?ecommerce" alt="Tienda Virtual">
+                    <img src="https://source.unsplash.com/random/800x600?ecommerce" alt="Plataforma E-commerce">
                     <div class="info-proyecto">
-                        <h4>Tienda Virtual</h4>
-                        <p>Plataforma E-commerce con carrito de compras y pasarela de pagos</p>
+                        <h4>Tienda Virtual Premium</h4>
+                        <p>Plataforma de comercio electrónico con:</p>
+                        <ul class="lista-proyecto">
+                            <li>Carrito dinámico</li>
+                            <li>Pasarela de pagos Stripe</li>
+                            <li>Sistema de recomendaciones AI</li>
+                        </ul>
                         <div class="tech-stack">
-                            <span>React</span>
+                            <span>Next.js</span>
                             <span>Node.js</span>
                             <span>MongoDB</span>
                         </div>
+                        <div class="proyecto-links">
+                            <a href="https://github.com/Gabrielmy35/FULLSTACK" class="btn-codigo" target="_blank">
+                                <i class="fab fa-github"></i> Código
+                            </a>
+                            <a href="#" class="btn-demo">Ver Demo</a>
+                        </div>
                     </div>
                 </div>
+
                 <div class="proyecto">
-                    <img src="https://source.unsplash.com/random/400x300?app" alt="App Educativa">
+                    <img src="https://source.unsplash.com/random/800x600?mobileapp" alt="App Reciclaje">
                     <div class="info-proyecto">
-                        <h4>Plataforma Educativa</h4>
-                        <p>Sistema de cursos online con videollamadas integradas</p>
+                        <h4>EcoRecicla App</h4>
+                        <p>Aplicación de reciclaje con:</p>
+                        <ul class="lista-proyecto">
+                            <li>Geolocalización de centros</li>
+                            <li>Sistema de recompensas</li>
+                            <li>Integración con redes sociales</li>
+                        </ul>
                         <div class="tech-stack">
-                            <span>Next.js</span>
-                            <span>WebRTC</span>
-                            <span>PostgreSQL</span>
+                            <span>Flutter</span>
+                            <span>Firebase</span>
+                            <span>Google Maps API</span>
+                        </div>
+                        <div class="proyecto-links">
+                            <a href="https://github.com/SakuWar/APP_RECICLAJE_REGREEN" class="btn-codigo" target="_blank">
+                                <i class="fab fa-github"></i> Código
+                            </a>
+                            <a href="#" class="btn-demo">Ver Demo</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección de Habilidades Mejorada -->
+        <!-- Sección Habilidades -->
         <section id="habilidades">
             <h2 class="titulo-seccion">Stack Tecnológico</h2>
             <div class="contenedor-habilidades">
                 <div class="grupo-habilidad">
-                    <h3><i class="fab fa-html5 red-icon"></i> Frontend</h3>
+                    <h3><i class="fab fa-js red-icon"></i> Frontend</h3>
+                    <div class="barra-habilidad">
+                        <div class="etiqueta">React</div>
+                        <div class="progreso" style="width: 90%"></div>
+                    </div>
+                    <div class="barra-habilidad">
+                        <div class="etiqueta">JavaScript</div>
+                        <div class="progreso" style="width: 85%"></div>
+                    </div>
                     <div class="barra-habilidad">
                         <div class="etiqueta">HTML5/CSS3</div>
                         <div class="progreso" style="width: 95%"></div>
                     </div>
-                    <div class="barra-habilidad">
-                        <div class="etiqueta">JavaScript (ES6+)</div>
-                        <div class="progreso" style="width: 88%"></div>
-                    </div>
-                    <div class="barra-habilidad">
-                        <div class="etiqueta">React + Redux</div>
-                        <div class="progreso" style="width: 85%"></div>
-                    </div>
                 </div>
-
+                
                 <div class="grupo-habilidad">
                     <h3><i class="fas fa-server red-icon"></i> Backend</h3>
                     <div class="barra-habilidad">
-                        <div class="etiqueta">Node.js/Express</div>
+                        <div class="etiqueta">Node.js</div>
                         <div class="progreso" style="width: 80%"></div>
                     </div>
                     <div class="barra-habilidad">
-                        <div class="etiqueta">Python/Django</div>
+                        <div class="etiqueta">Python</div>
                         <div class="progreso" style="width: 75%"></div>
                     </div>
                     <div class="barra-habilidad">
-                        <div class="etiqueta">REST APIs</div>
+                        <div class="etiqueta">MongoDB</div>
                         <div class="progreso" style="width: 85%"></div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Sección de Contacto Mejorada -->
-        <section id="personal" class="seccion-destacada">
-            <div class="contenedor-informacion">
-                <div class="tarjeta-informacion">
-                    <h2 class="titulo-seccion">Sobre Mí</h2>
-                    <div class="info-personal">
-                        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" 
-                            alt="Gabriel Morales" 
-                            class="icono-perfil">
-                        <div class="detalles-personales">
-                            <p><i class="fas fa-user red-icon"></i> Nombre: Gabriel Morales</p>
-                            <p><i class="fas fa-calendar-alt red-icon"></i> Edad: 19 años</p>
-                            <p><i class="fas fa-map-marker-alt red-icon"></i> Ubicación: Lima, Perú</p>
-                            <p><i class="fas fa-envelope red-icon"></i> Email: gabrielmy35@protonmail.com</p>
-                            <div class="redes-personales">
-                                <a href="https://github.com/Gabrielmy35" target="_blank" class="btn-red">
-                                    <i class="fab fa-github"></i> GitHub
-                                </a>
-                                <a href="https://www.linkedin.com/in/gabriel-morales-4b23782a8/" target="_blank" class="btn-red">
-                                    <i class="fab fa-linkedin"></i> LinkedIn
-                                </a>
-                                <a href="https://x.com/Gabriel23316894" target="_blank" class="btn-red">
-                                    <i class="fab fa-twitter"></i> Twitter
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Sección Blogger Mejorada -->
-                <div class="tarjeta-informacion">
-                    <h2 class="titulo-seccion">Blog Técnico</h2>
-                    <div class="blogger-info">
-                        <div class="blogger-descripcion">
-                            <h3><i class="fab fa-blogger red-icon"></i> Desarrollo Continuo</h3>
-                            <p>En mi blog comparto conocimientos sobre:</p>
-                            <ul class="lista-blogger">
-                                <li><i class="fas fa-check green-icon"></i> Tutoriales de programación</li>
-                                <li><i class="fas fa-check green-icon"></i> Mejores prácticas DevOps</li>
-                                <li><i class="fas fa-check green-icon"></i> Casos de estudio reales</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="configuraciones-blogger">
-                            <h3><i class="fas fa-tools red-icon"></i> Recursos Útiles</h3>
-                            <ul class="lista-configuraciones">
-                                <li>Guía de configuración de entornos</li>
-                                <li>Optimización de workflows</li>
-                                <li>Herramientas de debugging</li>
-                            </ul>
-                            <a href="https://gablogmy35.blogspot.com/" 
-                            class="btn-blogger" 
-                            target="_blank">
-                                <i class="fas fa-book-open"></i> Visitar Blog
-                            </a>
-                        </div>
-                    </div>
+        <!-- Sección Experiencia -->
+        <section id="experiencia" class="seccion-linea-tiempo">
+            <h2 class="titulo-seccion">Trayectoria Profesional</h2>
+            <div class="contenedor-timeline">
+                <div class="item-timeline">
+                    <div class="fecha">2023 - Actual</div>
+                    <h3>Desarrollador FullStack Freelance</h3>
+                    <ul>
+                        <li>Desarrollo de 15+ aplicaciones web</li>
+                        <li>Colaboración con startups internacionales</li>
+                        <li>Optimización de rendimiento en proyectos existentes</li>
+                    </ul>
                 </div>
+                
+                <div class="item-timeline">
+                    <div class="fecha">2021 - 2023</div>
+                    <h3>Practicante Desarrollo Móvil</h3>
+                    <ul>
+                        <li>Desarrollo de 3 aplicaciones publicadas</li>
+                        <li>Implementación de features complejas</li>
+                        <li>Integración con APIs REST</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-                <!-- Sección Formación Mejorada -->
-                <div class="tarjeta-informacion info-adicional">
-                    <h2 class="titulo-seccion">Formación Académica</h2>
-                    <div class="contenido-adicional">
-                        <div class="tarjeta-adicional">
-                            <i class="fas fa-university green-icon"></i>
-                            <h3>Educación Superior</h3>
-                            <p>Estudiante de Ingeniería de Software</p>
-                            <p>Universidad Nacional de Ingeniería</p>
-                        </div>
-                        <div class="tarjeta-adicional">
-                            <i class="fas fa-certificate green-icon"></i>
-                            <h3>Certificaciones</h3>
-                            <p>AWS Certified Developer</p>
-                            <p>Scrum Foundation Professional</p>
-                        </div>
+        <!-- Sección Contacto -->
+        <section id="contacto" class="seccion-contacto">
+            <h2 class="titulo-seccion">Trabajemos Juntos</h2>
+            <div class="contenedor-contacto">
+                <form class="formulario-contacto">
+                    <div class="grupo-form">
+                        <input type="text" placeholder="Nombre completo" required>
+                        <input type="email" placeholder="Correo electrónico" required>
+                    </div>
+                    <textarea placeholder="Cuéntame sobre tu proyecto..." rows="5" required></textarea>
+                    <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+                </form>
+                <div class="info-contacto">
+                    <h3>Otros medios</h3>
+                    <p><i class="fas fa-envelope"></i> gabrielmy35@protonmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Lima, Perú</p>
+                    <div class="redes-contacto">
+                        <a href="https://github.com/Gabrielmy35" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/gabriel-morales-4b23782a8/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/Gabriel23316894" target="_blank"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
             </div>
