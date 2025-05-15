@@ -1,188 +1,226 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEB-Curso-google</title>
+    <title>Desarrollo Web Profesional</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        body {
-            background-color: #f5f5f5;
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        nav {
-            margin-top: 1.5rem;
-            background-color: #34495e;
-            padding: 1rem;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-
-        nav a:hover {
-            background-color: #2980b9;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        section {
-            background-color: white;
-            padding: 2rem;
-            margin: 2rem 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        h2 {
-            color: #2c3e50;
-            margin-bottom: 1.5rem;
-            border-bottom: 2px solid #2980b9;
-            padding-bottom: 0.5rem;
-        }
-
-        img {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-            border-radius: 8px;
-            margin: 1rem 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        ul, ol {
-            padding-left: 2rem;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-        }
-
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        footer a {
-            color: #3498db;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        .servicios-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1rem;
-        }
-
-        .servicio-item {
-            background-color: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 8px;
-            transition: transform 0.3s;
-        }
-
-        .servicio-item:hover {
-            transform: translateY(-5px);
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <body>
-    <!-- Encabezado -->
-    <header>
-        <h1>Bienvenido a Mi Sitio Web</h1>
+    <header class="header-animado">
+        <h1>Desarrollo Web Profesional</h1>
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#portafolio">Portafolio</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#personal">Sobre Mí</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Contenido principal -->
     <main>
-        <section id="inicio">
-            <h2>Sobre Mí</h2>
-            <p>¡Hola! Soy un apasionado del desarrollo web. Aquí hay una imagen que me representa:</p>
-            <div style="text-align: center;">
-                <img 
-                    src="https://img.freepik.com/foto-gratis/experiencia-programacion-persona-que-trabaja-codigos-computadora_23-2150010125.jpg?semt=ais_hybrid&w=740" 
-                    alt="Imagen de ejemplo"
-                    width="300"
-                    height="200"
-                >
+        <!-- Sección de Servicios Mejorada -->
+        <section id="servicios">
+            <h2 class="titulo-seccion">Nuestros Servicios</h2>
+            <div class="grid-servicios">
+                <div class="tarjeta-servicio">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Desarrollo Web FullStack</h3>
+                    <p>Creación de aplicaciones completas con MERN Stack (MongoDB, Express, React, Node.js)</p>
+                    <ul class="lista-servicios">
+                        <li>Desarrollo de APIs REST</li>
+                        <li>Autenticación JWT</li>
+                        <li>Integración con pasarelas de pago</li>
+                    </ul>
+                </div>
+                <div class="tarjeta-servicio">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Diseño Mobile First</h3>
+                    <p>Desarrollo responsive prioritizando dispositivos móviles:</p>
+                    <ul class="lista-servicios">
+                        <li>Pruebas en múltiples dispositivos</li>
+                        <li>Optimización de rendimiento</li>
+                        <li>Animaciones CSS fluidas</li>
+                    </ul>
+                </div>
+                <div class="tarjeta-servicio">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Optimización Avanzada</h3>
+                    <p>Mejora continua de proyectos existentes:</p>
+                    <ul class="lista-servicios">
+                        <li>Auditoría SEO técnica</li>
+                        <li>Compresión de assets</li>
+                        <li>Implementación de CDN</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
-        <section id="servicios">
-            <h2>Mis Servicios</h2>
-            <ul>
-                <li>Diseño web básico</li>
-                <li>Maquetación HTML</li>
-                <li>Optimización de imágenes</li>
-            </ul>
+        <!-- Sección de Portafolio Mejorada -->
+        <section id="portafolio" class="seccion-destacada">
+            <h2 class="titulo-seccion">Proyectos Destacados</h2>
+            <div class="grid-portafolio">
+                <div class="proyecto">
+                    <img src="https://source.unsplash.com/random/400x300?ecommerce" alt="Tienda Virtual">
+                    <div class="info-proyecto">
+                        <h4>Tienda Virtual</h4>
+                        <p>Plataforma E-commerce con carrito de compras y pasarela de pagos</p>
+                        <div class="tech-stack">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="https://source.unsplash.com/random/400x300?app" alt="App Educativa">
+                    <div class="info-proyecto">
+                        <h4>Plataforma Educativa</h4>
+                        <p>Sistema de cursos online con videollamadas integradas</p>
+                        <div class="tech-stack">
+                            <span>Next.js</span>
+                            <span>WebRTC</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="tutorial">
-            <h2>Cómo empezar</h2>
-            <ol>
-                <li>Abre tu editor de código</li>
-                <li>Crea un archivo index.html</li>
-                <li>¡Empieza a codear!</li>
-            </ol>
+        <!-- Sección de Habilidades Mejorada -->
+        <section id="habilidades">
+            <h2 class="titulo-seccion">Stack Tecnológico</h2>
+            <div class="contenedor-habilidades">
+                <div class="grupo-habilidad">
+                    <h3><i class="fab fa-html5 red-icon"></i> Frontend</h3>
+                    <div class="barra-habilidad">
+                        <div class="etiqueta">HTML5/CSS3</div>
+                        <div class="progreso" style="width: 95%"></div>
+                    </div>
+                    <div class="barra-habilidad">
+                        <div class="etiqueta">JavaScript (ES6+)</div>
+                        <div class="progreso" style="width: 88%"></div>
+                    </div>
+                    <div class="barra-habilidad">
+                        <div class="etiqueta">React + Redux</div>
+                        <div class="progreso" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <div class="grupo-habilidad">
+                    <h3><i class="fas fa-server red-icon"></i> Backend</h3>
+                    <div class="barra-habilidad">
+                        <div class="etiqueta">Node.js/Express</div>
+                        <div class="progreso" style="width: 80%"></div>
+                    </div>
+                    <div class="barra-habilidad">
+                        <div class="etiqueta">Python/Django</div>
+                        <div class="progreso" style="width: 75%"></div>
+                    </div>
+                    <div class="barra-habilidad">
+                        <div class="etiqueta">REST APIs</div>
+                        <div class="progreso" style="width: 85%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Sección de Contacto Mejorada -->
+        <section id="personal" class="seccion-destacada">
+            <div class="contenedor-informacion">
+                <div class="tarjeta-informacion">
+                    <h2 class="titulo-seccion">Sobre Mí</h2>
+                    <div class="info-personal">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" 
+                            alt="Gabriel Morales" 
+                            class="icono-perfil">
+                        <div class="detalles-personales">
+                            <p><i class="fas fa-user red-icon"></i> Nombre: Gabriel Morales</p>
+                            <p><i class="fas fa-calendar-alt red-icon"></i> Edad: 19 años</p>
+                            <p><i class="fas fa-map-marker-alt red-icon"></i> Ubicación: Lima, Perú</p>
+                            <p><i class="fas fa-envelope red-icon"></i> Email: gabrielmy35@protonmail.com</p>
+                            <div class="redes-personales">
+                                <a href="https://github.com/Gabrielmy35" target="_blank" class="btn-red">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                                <a href="https://www.linkedin.com/in/gabriel-morales-4b23782a8/" target="_blank" class="btn-red">
+                                    <i class="fab fa-linkedin"></i> LinkedIn
+                                </a>
+                                <a href="https://x.com/Gabriel23316894" target="_blank" class="btn-red">
+                                    <i class="fab fa-twitter"></i> Twitter
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección Blogger Mejorada -->
+                <div class="tarjeta-informacion">
+                    <h2 class="titulo-seccion">Blog Técnico</h2>
+                    <div class="blogger-info">
+                        <div class="blogger-descripcion">
+                            <h3><i class="fab fa-blogger red-icon"></i> Desarrollo Continuo</h3>
+                            <p>En mi blog comparto conocimientos sobre:</p>
+                            <ul class="lista-blogger">
+                                <li><i class="fas fa-check green-icon"></i> Tutoriales de programación</li>
+                                <li><i class="fas fa-check green-icon"></i> Mejores prácticas DevOps</li>
+                                <li><i class="fas fa-check green-icon"></i> Casos de estudio reales</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="configuraciones-blogger">
+                            <h3><i class="fas fa-tools red-icon"></i> Recursos Útiles</h3>
+                            <ul class="lista-configuraciones">
+                                <li>Guía de configuración de entornos</li>
+                                <li>Optimización de workflows</li>
+                                <li>Herramientas de debugging</li>
+                            </ul>
+                            <a href="https://gablogmy35.blogspot.com/" 
+                            class="btn-blogger" 
+                            target="_blank">
+                                <i class="fas fa-book-open"></i> Visitar Blog
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección Formación Mejorada -->
+                <div class="tarjeta-informacion info-adicional">
+                    <h2 class="titulo-seccion">Formación Académica</h2>
+                    <div class="contenido-adicional">
+                        <div class="tarjeta-adicional">
+                            <i class="fas fa-university green-icon"></i>
+                            <h3>Educación Superior</h3>
+                            <p>Estudiante de Ingeniería de Software</p>
+                            <p>Universidad Nacional de Ingeniería</p>
+                        </div>
+                        <div class="tarjeta-adicional">
+                            <i class="fas fa-certificate green-icon"></i>
+                            <h3>Certificaciones</h3>
+                            <p>AWS Certified Developer</p>
+                            <p>Scrum Foundation Professional</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <!-- Pie de página -->
     <footer>
-        <p>Contacto: <a href="mailto:gabrielyangua30@email.com">gabrielyangua30@email.com</a></p>
-        <p>&copy; 2024 Mi Primera Página Web</p>
+        <div class="contenido-footer">
+            <div class="redes-sociales">
+                <a href="https://github.com/Gabrielmy35" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/gabriel-morales-4b23782a8/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/Gabriel23316894" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2024 Gabriel Morales - Todos los derechos reservados</p>
+        </div>
     </footer>
-</body>
+
+    <script src="animaciones.js"></script>
 </body>
 </html>
