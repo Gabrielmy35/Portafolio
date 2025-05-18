@@ -22,6 +22,39 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Menú hamburguesa
+document.addEventListener('DOMContentLoaded', function() {
+    const menuHamburguesa = document.getElementById('menuHamburguesa');
+    const navPrincipal = document.getElementById('navPrincipal');
+
+    // Toggle del menú
+    menuHamburguesa.addEventListener('click', function(e) {
+        e.stopPropagation();
+        navPrincipal.classList.toggle('active');
+    });
+
+    // Cerrar menú al hacer click en enlace
+    document.querySelectorAll('.nav-principal a').forEach(link => {
+        link.addEventListener('click', () => {
+            navPrincipal.classList.remove('active');
+        });
+    });
+
+    // Cerrar menú al hacer click fuera
+    document.addEventListener('click', function(e) {
+        if (!navPrincipal.contains(e.target) && !menuHamburguesa.contains(e.target)) {
+            navPrincipal.classList.remove('active');
+        }
+    });
+
+    // Cerrar menú al redimensionar
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            navPrincipal.classList.remove('active');
+        }
+    });
+});
+
 // Animación formulario
 const formulario = document.querySelector('.formulario-contacto');
 formulario.addEventListener('submit', (e) => {
