@@ -12,6 +12,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
@@ -29,6 +33,13 @@ body {
     width: 100%;
     top: 0;
     z-index: 1000;
+    animation: slideDown 0.5s ease-out;
+}
+
+.header-animado h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
 }
 
 nav ul {
@@ -43,6 +54,7 @@ nav a {
     color: #333;
     font-weight: 500;
     transition: color 0.3s ease;
+    padding: 0.5rem;
 }
 
 nav a:hover {
@@ -56,6 +68,9 @@ nav a:hover {
     color: var(--blanco);
     padding: 8rem 1rem;
     text-align: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 .contenido-hero {
@@ -75,6 +90,26 @@ nav a:hover {
     max-width: 600px;
     margin: 0 auto 2rem;
     color: #666;
+}
+
+.btn-blogger {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: #FF5722;
+    color: white !important;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+    border: 2px solid transparent;
+    margin-top: 1.5rem;
+}
+
+.btn-blogger:hover {
+    background-color: #E64A19;
+    border-color: #FF5722;
 }
 
 /* Servicios */
@@ -125,73 +160,88 @@ nav a:hover {
     margin: 0 auto;
 }
 
-.proyecto {
-    position: relative;
-    border-radius: 15px;
+.proyectos-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.proyecto-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
     overflow: hidden;
-    box-shadow: var(--sombra);
-    transition: transform 0.3s ease;
-}
-
-.proyecto:hover {
-    transform: translateY(-5px);
-}
-
-.proyecto img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.info-proyecto {
-    position: absolute;
-    bottom: 0;
-    background: rgba(255,255,255,0.95);
-    width: 100%;
-    padding: 1.5rem;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-}
-
-.proyecto:hover .info-proyecto {
-    transform: translateY(0);
-}
-
-.tech-stack {
     display: flex;
+    border: 1px solid #eee;
+}
+
+.proyecto-imagen {
+    flex: 1;
+    max-width: 40%;
+}
+
+.proyecto-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+}
+
+.proyecto-info {
+    flex: 1;
+    padding: 1.5rem;
+}
+
+.proyecto-info h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.tech-list {
+    list-style: none;
+    padding-left: 1rem;
+    margin: 1rem 0;
+}
+
+.tech-list li {
+    padding: 0.5rem 0;
+    color: #34495e;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.proyecto-tech {
+    display: flex;
+    flex-wrap: wrap;
     gap: 0.5rem;
     margin: 1rem 0;
-    flex-wrap: wrap;
 }
 
-.tech-stack span {
-    background: var(--rojo-principal);
-    color: var(--blanco);
+.tech-tag {
+    background: #e74c3c;
+    color: white;
     padding: 0.3rem 0.8rem;
     border-radius: 15px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
-.btn-codigo {
+.github-link {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: var(--verde-secundario);
-    color: var(--blanco);
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
+    color: #e74c3c;
     text-decoration: none;
-    margin-top: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border: 2px solid #e74c3c;
+    border-radius: 5px;
     transition: all 0.3s ease;
 }
 
-.btn-codigo:hover {
-    background: #27ae60;
-    transform: translateY(-2px);
+.github-link:hover {
+    background: #e74c3c;
+    color: white;
 }
 
 /* Habilidades */
@@ -214,6 +264,7 @@ nav a:hover {
     border-radius: 5px;
     margin: 1rem 0;
     height: 25px;
+    position: relative;
 }
 
 .progreso {
@@ -221,6 +272,17 @@ nav a:hover {
     height: 100%;
     border-radius: 5px;
     transition: width 1s ease-in-out;
+    position: relative;
+}
+
+.etiqueta {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--blanco);
+    z-index: 1;
+    font-size: 0.9rem;
 }
 
 /* Experiencia */
@@ -292,6 +354,7 @@ nav a:hover {
     margin: 0.5rem 0;
     border: 2px solid #ddd;
     border-radius: 5px;
+    font-family: inherit;
 }
 
 .grupo-form {
@@ -308,6 +371,8 @@ nav a:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
+    width: 100%;
+    font-size: 1rem;
 }
 
 .btn-enviar:hover {
@@ -329,6 +394,11 @@ nav a:hover {
 .redes-contacto a {
     font-size: 1.5rem;
     color: var(--rojo-principal);
+    transition: color 0.3s ease;
+}
+
+.redes-contacto a:hover {
+    color: #c0392b;
 }
 
 /* Footer */
@@ -373,138 +443,108 @@ footer {
     to { transform: translateY(0); }
 }
 
-.header-animado {
-    animation: slideDown 0.5s ease-out;
+/* Media Queries */
+@media (max-width: 1024px) {
+    .grid-servicios,
+    .grid-portafolio {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .seccion-hero {
+        padding: 6rem 1rem;
+    }
 }
 
 @media (max-width: 768px) {
-    .grid-servicios,
-    .grid-portafolio {
-        grid-template-columns: 1fr;
+    .header-animado h1 {
+        font-size: 1.5rem;
     }
-    
+
     nav ul {
-        flex-direction: column;
-        text-align: center;
+        flex-wrap: wrap;
         gap: 1rem;
+        padding: 0.5rem;
     }
-    
+
+    .seccion-hero {
+        padding: 4rem 1rem;
+    }
+
+    .seccion-hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .proyecto-card {
+        flex-direction: column;
+    }
+
+    .proyecto-imagen {
+        max-width: 100%;
+        height: 250px;
+    }
+
     .contenedor-contacto {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
-    
+
     .grupo-form {
         grid-template-columns: 1fr;
     }
 }
 
-.proyectos-container {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+@media (max-width: 480px) {
+    :root {
+        font-size: 14px;
+    }
+
+    nav ul {
+        gap: 0.5rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    .titulo-seccion {
+        font-size: 2rem;
+    }
+
+    .btn-blogger {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .proyecto-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .tech-tag {
+        font-size: 0.8rem;
+    }
+
+    .formulario-contacto input,
+    .formulario-contacto textarea {
+        padding: 0.8rem;
+    }
+
+    .btn-enviar {
+        padding: 0.8rem;
+    }
 }
 
-.proyecto-card {
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    margin-bottom: 2rem;
-    overflow: hidden;
-    display: flex;
-    border: 1px solid #eee;
-}
-
-.proyecto-imagen {
-    flex: 1;
-    max-width: 40%;
-}
-
-.proyecto-imagen img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.proyecto-info {
-    flex: 1;
-    padding: 1.5rem;
-}
-
-.proyecto-info h3 {
-    color: #2c3e50;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-}
-
-.tech-list {
-    list-style: none;
-    padding-left: 1rem;
-    margin: 1rem 0;
-}
-
-.tech-list li {
-    padding: 0.5rem 0;
-    color: #34495e;
-    border-bottom: 1px solid #ecf0f1;
-}
-
-.proyecto-tech {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin: 1rem 0;
-}
-
-.tech-tag {
-    background: #e74c3c;
-    color: white;
-    padding: 0.3rem 0.8rem;
-    border-radius: 15px;
-    font-size: 0.9rem;
-}
-
-.github-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #e74c3c;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border: 2px solid #e74c3c;
-    border-radius: 5px;
-}
-
-@media (max-width: 768px) {
-    .proyecto-card {
-        flex-direction: column;
+@media (max-width: 360px) {
+    .header-animado h1 {
+        font-size: 1.3rem;
     }
     
-    .proyecto-imagen {
-        max-width: 100%;
-        height: 250px;
+    nav ul {
+        gap: 0.3rem;
     }
-}
-
-.btn-blogger {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.8rem;
-    background: #FF5722;
-    color: white !important;
-    padding: 0.8rem 1.5rem;
-    border-radius: 25px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    font-weight: 500;
-    border: 2px solid transparent;
-}
-
-.btn-blogger:hover {
-    background-color: #E64A19;
-    border-color: #FF5722;
-}
-
-.btn-blogger i {
-    font-size: 1.2rem;
+    
+    nav a {
+        padding: 0.3rem;
+        font-size: 0.8rem;
+    }
 }
