@@ -16,8 +16,8 @@
 
 ## 🌐 Acceso Directo
 
-- 🔹 **Versión en producción:** [Visitar Sitio Web](https://gabrielmy35.github.io/Web-curso-google/)
-- 🔹 **Repositorio GitHub:** [Ver Código Fuente](https://github.com/Gabrielmy35/Web-curso-google)
+- 🔹 **Versión en producción:** [Visitar Sitio Web](https://gabrielmy35.github.io/Portafolio/)
+- 🔹 **Repositorio GitHub:** [Ver Código Fuente](https://github.com/Gabrielmy35/Portafolio)
 
 ---
 
