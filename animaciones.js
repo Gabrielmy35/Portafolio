@@ -62,3 +62,24 @@ formulario.addEventListener('submit', (e) => {
     formulario.reset();
     alert('¡Mensaje enviado con éxito! Pronto me pondré en contacto contigo.');
 });
+// Scrollspy: resaltar ítem activo del menú según la sección visible
+window.addEventListener('scroll', () => {
+    const secciones = document.querySelectorAll('section[id]');
+    const scrollY = window.pageYOffset;
+
+    secciones.forEach(seccion => {
+        const seccionTop = seccion.offsetTop - 80;
+        const seccionHeight = seccion.offsetHeight;
+        const seccionId = seccion.getAttribute('id');
+
+        if (scrollY >= seccionTop && scrollY < seccionTop + seccionHeight || 
+    (seccionId === 'contacto' && (window.innerHeight + scrollY) >= document.body.offsetHeight)) {
+            document.querySelectorAll('.nav-principal a').forEach(link => {
+                link.classList.remove('activo');
+                if (link.getAttribute('href') === `#${seccionId}`) {
+                    link.classList.add('activo');
+                }
+            });
+        }
+    });
+});
