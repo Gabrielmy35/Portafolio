@@ -4,7 +4,7 @@
 [![Sitio en Vivo](https://img.shields.io/badge/Sitio-En%20Vivo-brightgreen)](https://gabrielmy35.github.io/Portafolio/)
 [![Blogger](https://img.shields.io/badge/Blog-Tech%20Blog-orange)](https://gablogmy35.blogspot.com/)
 
-🔗 **URL Oficial:** [gabrielmy35.github.io/Web-curso-google](https://gabrielmy35.github.io/Portafolio/)
+🔗 **URL Oficial:** [gabrielmy35.github.io/Portafolio/](https://gabrielmy35.github.io/Portafolio/)
 
 > Portafolio profesional moderno que muestra habilidades, proyectos y experiencia en desarrollo web y móvil.
 
